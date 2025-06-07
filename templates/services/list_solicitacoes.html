@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Solicitações de Serviço</h2>
+<a href="{% url 'services:add_solicitacao' %}">Nova Solicitação</a>
+<ul>
+  {% for s in solicitacoes %}
+    <li>{{ s.cliente }} - {{ s.status }}
+      <a href="{% url 'services:edit_solicitacao' s.id %}">Editar</a>
+      <a href="{% url 'services:delete_solicitacao' s.id %}">Excluir</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

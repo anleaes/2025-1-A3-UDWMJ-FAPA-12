@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Faturas Emitidas</h2>
+<a href="{% url 'invoices:add_fatura' %}">Nova Fatura</a>
+<ul>
+  {% for fatura in faturas %}
+    <li>Fatura #{{ fatura.id }} - Valor: R$ {{ fatura.valor_total }}
+      <a href="{% url 'invoices:edit_fatura' fatura.id %}">Editar</a>
+      <a href="{% url 'invoices:delete_fatura' fatura.id %}">Excluir</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

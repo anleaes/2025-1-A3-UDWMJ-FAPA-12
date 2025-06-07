@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Lista de Equipamentos</h2>
+<a href="{% url 'equipments:add_equipamento' %}">Adicionar Equipamento</a>
+<ul>
+  {% for equipamento in equipamentos %}
+    <li>{{ equipamento.modelo }} - {{ equipamento.numero_serie }}
+      <a href="{% url 'equipments:edit_equipamento' equipamento.id %}">Editar</a>
+      <a href="{% url 'equipments:delete_equipamento' equipamento.id %}">Excluir</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

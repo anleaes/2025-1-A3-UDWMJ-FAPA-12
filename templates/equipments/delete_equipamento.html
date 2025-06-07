@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Excluir Equipamento</h2>
+<p>Tem certeza que deseja excluir {{ equipamento.modelo }}?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirmar</button>
+</form>
+<a href="{% url 'equipments:list_equipamentos' %}">Cancelar</a>
+{% endblock %}

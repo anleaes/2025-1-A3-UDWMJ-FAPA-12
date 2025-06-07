@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Peças Cadastradas</h2>
+<a href="{% url 'parts:add_peca' %}">Adicionar Peça</a>
+<ul>
+  {% for peca in pecas %}
+    <li>{{ peca.nome }} - R$ {{ peca.custo_unitario }}
+      <a href="{% url 'parts:edit_peca' peca.id %}">Editar</a>
+      <a href="{% url 'parts:delete_peca' peca.id %}">Excluir</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

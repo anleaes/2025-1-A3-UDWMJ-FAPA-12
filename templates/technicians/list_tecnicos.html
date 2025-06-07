@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Lista de Técnicos</h2>
+<a href="{% url 'technicians:add_tecnico' %}">Adicionar Técnico</a>
+<ul>
+  {% for tecnico in tecnicos %}
+    <li>{{ tecnico.nome }} - {{ tecnico.especializacao }}
+      <a href="{% url 'technicians:edit_tecnico' tecnico.id %}">Editar</a>
+      <a href="{% url 'technicians:delete_tecnico' tecnico.id %}">Excluir</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Sistema de Gerenciamento de Manutenção</h1>
+  <p class="text-center text-muted">Bem-vindo! Escolha uma área para gerenciar:</p>
+
+  <div class="row mt-4">
+    <div class="col-md-4 mb-3">
+      <a href="{% url 'clients:list_clientes' %}" class="btn btn-primary w-100">Clientes</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="{% url 'equipments:list_equipamentos' %}" class="btn btn-success w-100">Equipamentos</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="{% url 'technicians:list_tecnicos' %}" class="btn btn-secondary w-100">Técnicos</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="{% url 'services:list_solicitacoes' %}" class="btn btn-success w-100">Solicitações de Serviço</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="{% url 'parts:list_pecas' %}" class="btn btn-warning w-100">Peças</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="{% url 'invoices:list_faturas' %}" class="btn btn-dark w-100">Faturas</a>
+    </div>
+    
+  </div>
+</div>
+{% endblock %}
+

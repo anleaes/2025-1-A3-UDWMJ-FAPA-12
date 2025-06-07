@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Excluir Técnico</h2>
+<p>Tem certeza que deseja excluir {{ tecnico.nome }}?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirmar</button>
+</form>
+<a href="{% url 'technicians:list_tecnicos' %}">Cancelar</a>
+{% endblock %}
