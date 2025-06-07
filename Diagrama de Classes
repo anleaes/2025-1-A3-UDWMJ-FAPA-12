@@ -1,0 +1,85 @@
+Diagrama de Classes - Aplicativo de Serviço de Manutenção
+
+@startuml
+&#39; Definição de pacote (opcional)
+package &quot;Domínio&quot; {
+class Cliente {
+- id: Long
+- nome: String
+- endereco: String
+- email: String
+- telefone: String
++ solicitarServico(equipamento: Equipamento, descricao: String):
+SolicitacaoServico
+}
+
+class Equipamento {
+- id: Long
+- numeroSerie: String
+- modelo: String
+- localizacao: String
+
++ obterStatus(): String
+}
+
+class SolicitacaoServico {
+- id: Long
+- dataSolicitacao: Date
+- descricao: String
+- status: StatusSolicitacao
++ atribuirTecnico(tecnico: Tecnico): void
++ atualizarStatus(status: StatusSolicitacao): void
+}
+
+enum StatusSolicitacao {
+PENDENTE
+ATRIBUIDA
+EM_ANDAMENTO
+CONCLUIDA
+CANCELADA
+}
+
+class Tecnico {
+- id: Long
+- nome: String
+- especializacao: String
+- telefone: String
++ iniciarServico(solicitacao: SolicitacaoServico): void
++ concluirServico(solicitacao: SolicitacaoServico): void
+}
+
+class Agendamento {
+- id: Long
+- data: Date
+- periodoHorario: String
++ agendarServico(solicitacao: SolicitacaoServico, data: Date, periodo:
+String): void
+}
+
+class Peca {
+- id: Long
+- nome: String
+- custoUnitario: BigDecimal
++ calcularCusto(quantidade: Integer): BigDecimal
+}
+
+class Fatura {
+- id: Long
+- dataEmissao: Date
+- valorTotal: BigDecimal
++ adicionarItem(descricao: String, custo: BigDecimal): void
++ calcularTotal(): BigDecimal
+}
+}
+
+&#39; Relacionamentos
+Cliente &quot;1&quot; -- &quot;0..*&quot; SolicitacaoServico : cria &gt;
+Equipamento &quot;1&quot; -- &quot;0..*&quot; SolicitacaoServico : relacionado a &gt;
+SolicitacaoServico &quot;0..1&quot; -- &quot;1&quot; Tecnico : atribuído a &gt;
+SolicitacaoServico &quot;1&quot; -- &quot;0..1&quot; Agendamento : agendado em &gt;
+
+SolicitacaoServico &quot;1&quot; -- &quot;0..*&quot; Peca : utiliza &gt;
+SolicitacaoServico &quot;1&quot; -- &quot;0..1&quot; Fatura : gera &gt;
+Fatura &quot;1&quot; -- &quot;0..*&quot; Peca : inclui &gt;
+
+@enduml
