@@ -12,3 +12,4 @@ class Peca(models.Model):
 
     def __str__(self):
         return self.nome
+# parts(models): parte 2 – método calcularCusto
