@@ -6,6 +6,7 @@ from decimal import Decimal
 class Fatura(models.Model):
     data_emissao = models.DateField(auto_now_add=True)
     valor_total = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
+# invoices(models): parte 1 – criar Fatura
 
     def adicionar_item(self, descricao, custo):
         self.valor_total += Decimal(custo)
