@@ -16,6 +16,7 @@ def add_tecnico(request):
     else:
         form = TecnicoForm()
     return render(request, 'technicians/add_tecnico.html', {'form': form})
+# technicians(views): parte 1 – adicionar list/add views
 
 def edit_tecnico(request, id):
     tecnico = get_object_or_404(Tecnico, id=id)
