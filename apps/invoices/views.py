@@ -17,6 +17,7 @@ def add_fatura(request):
     else:
         form = FaturaForm()
     return render(request, 'invoices/add_fatura.html', {'form': form})
+# invoices(views): parte 1 – adicionar list/add views
 
 
 def edit_fatura(request, id):
