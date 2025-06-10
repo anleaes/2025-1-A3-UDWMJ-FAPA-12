@@ -16,6 +16,7 @@ def add_equipamento(request):
     else:
         form = EquipamentoForm()
     return render(request, 'equipments/add_equipamento.html', {'form': form})
+# equipments(views): parte 1 – adicionar list e add views
 
 def edit_equipamento(request, id):
     equipamento = get_object_or_404(Equipamento, id=id)
