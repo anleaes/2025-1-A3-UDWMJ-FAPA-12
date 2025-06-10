@@ -10,3 +10,4 @@ urlpatterns = [
     path('edit/<int:id>/', views.edit_tecnico, name='edit_tecnico'),
     path('delete/<int:id>/', views.delete_tecnico, name='delete_tecnico'),
 ]
+# technicians(urls): parte 2 – rotas básicas
