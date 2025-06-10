@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 app_name = 'invoices'
+# invoices(urls): parte 1 – namespace
 
 urlpatterns = [
     path('', views.list_faturas, name='list_faturas'),
