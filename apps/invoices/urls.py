@@ -10,3 +10,4 @@ urlpatterns = [
     path('edit/<int:id>/', views.edit_fatura, name='edit_fatura'),
     path('delete/<int:id>/', views.delete_fatura, name='delete_fatura'),
 ]
+# invoices(urls): parte 2 – rotas iniciais
