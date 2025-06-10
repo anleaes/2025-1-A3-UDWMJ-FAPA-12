@@ -37,4 +37,4 @@ def delete_fatura(request, id):
         fatura.delete()
         return redirect('invoices:list_faturas')
     return render(request, 'invoices/delete_fatura.html', {'fatura': fatura})
-# 
+# invoices(views): parte 2 – refinar edição
