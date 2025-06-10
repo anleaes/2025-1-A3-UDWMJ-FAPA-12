@@ -10,3 +10,4 @@ class Equipamento(models.Model):
 
     def __str__(self):
         return f"{self.modelo} - {self.numero_serie}"
+# equipments(models): parte 2 – adicionar métodos
