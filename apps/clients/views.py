@@ -18,6 +18,7 @@ def add_cliente(request):
     else:
         form = ClienteForm()
     return render(request, 'clients/add_cliente.html', {'form': form})
+# clients(views): parte 1 – adicionar list e add views
 
 # Editar
 def edit_cliente(request, id):
