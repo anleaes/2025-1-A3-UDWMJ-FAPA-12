@@ -35,3 +35,4 @@ def delete_tecnico(request, id):
         tecnico.delete()
         return redirect('technicians:list_tecnicos')
     return render(request, 'technicians/delete_tecnico.html', {'tecnico': tecnico})
+# technicians(views): parte 2 – refinar edição/exclusão
