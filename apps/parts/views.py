@@ -27,7 +27,7 @@ def edit_peca(request, id):
             return redirect('parts:list_pecas')
     else:
         form = PecaForm(instance=peca)
-    return render(request, 'parts/edit_peca.html', {'form': form})
+    return render(request, 'parts/add_peca.html', {'form': form})
 
 def delete_peca(request, id):
     peca = get_object_or_404(Peca, id=id)

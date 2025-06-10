@@ -26,7 +26,7 @@ def edit_equipamento(request, id):
             return redirect('equipments:list_equipamentos')
     else:
         form = EquipamentoForm(instance=equipamento)
-    return render(request, 'equipments/edit_equipamento.html', {'form': form})
+    return render(request, 'equipments/add_equipamento.html', {'form': form})
 
 def delete_equipamento(request, id):
     equipamento = get_object_or_404(Equipamento, id=id)

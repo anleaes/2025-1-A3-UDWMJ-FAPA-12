@@ -29,7 +29,7 @@ def edit_cliente(request, id):
             return redirect('clients:list_clientes')
     else:
         form = ClienteForm(instance=cliente)
-    return render(request, 'clients/edit_cliente.html', {'form': form})
+    return render(request, 'clients/add_cliente.html', {'form': form})
 
 # Deletar
 def delete_cliente(request, id):

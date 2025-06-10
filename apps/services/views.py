@@ -27,7 +27,7 @@ def edit_solicitacao(request, id):
             return redirect('services:list_solicitacoes')
     else:
         form = SolicitacaoServicoForm(instance=solicitacao)
-    return render(request, 'services/edit_solicitacao.html', {'form': form})
+    return render(request, 'services/add_solicitacao.html', {'form': form})
 
 def delete_solicitacao(request, id):
     solicitacao = get_object_or_404(SolicitacaoServico, id=id)

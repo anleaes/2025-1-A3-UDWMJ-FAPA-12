@@ -26,7 +26,7 @@ def edit_tecnico(request, id):
             return redirect('technicians:list_tecnicos')
     else:
         form = TecnicoForm(instance=tecnico)
-    return render(request, 'technicians/edit_tecnico.html', {'form': form})
+    return render(request, 'technicians/add_tecnico.html', {'form': form})
 
 def delete_tecnico(request, id):
     tecnico = get_object_or_404(Tecnico, id=id)

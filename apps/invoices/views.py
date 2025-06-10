@@ -18,6 +18,7 @@ def add_fatura(request):
         form = FaturaForm()
     return render(request, 'invoices/add_fatura.html', {'form': form})
 
+
 def edit_fatura(request, id):
     fatura = get_object_or_404(Fatura, id=id)
     if request.method == 'POST':
@@ -27,7 +28,7 @@ def edit_fatura(request, id):
             return redirect('invoices:list_faturas')
     else:
         form = FaturaForm(instance=fatura)
-    return render(request, 'invoices/edit_fatura.html', {'form': form})
+    return render(request, 'invoices/add_fatura.html', {'form': form})
 
 def delete_fatura(request, id):
     fatura = get_object_or_404(Fatura, id=id)
@@ -35,3 +36,4 @@ def delete_fatura(request, id):
         fatura.delete()
         return redirect('invoices:list_faturas')
     return render(request, 'invoices/delete_fatura.html', {'fatura': fatura})
+# 
