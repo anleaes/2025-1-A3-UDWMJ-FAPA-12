@@ -13,3 +13,4 @@ class Fatura(models.Model):
 
     def __str__(self):
         return f"Fatura #{self.id} - R$ {self.valor_total}"
+# invoices(models): parte 2 – método total
