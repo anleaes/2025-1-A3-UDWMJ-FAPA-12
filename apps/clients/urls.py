@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 app_name = 'clients'
+#clients(urls): parte 1 – adicionar namespace
 
 urlpatterns = [
     path('', views.list_clientes, name='list_clientes'),
