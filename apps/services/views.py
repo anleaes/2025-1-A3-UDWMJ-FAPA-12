@@ -36,3 +36,4 @@ def delete_solicitacao(request, id):
         solicitacao.delete()
         return redirect('services:list_solicitacoes')
     return render(request, 'services/delete_solicitacao.html', {'solicitacao': solicitacao})
+# services(views): parte 2 – métodos de atribuição
