@@ -35,3 +35,4 @@ def delete_equipamento(request, id):
         equipamento.delete()
         return redirect('equipments:list_equipamentos')
     return render(request, 'equipments/delete_equipamento.html', {'equipamento': equipamento})
+# equipments(views): parte 2 – refinar update/delete
