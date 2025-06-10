@@ -36,3 +36,4 @@ def delete_peca(request, id):
         peca.delete()
         return redirect('parts:list_pecas')
     return render(request, 'parts/delete_peca.html', {'peca': peca})
+# parts(views): parte 2 – refinar lógica
