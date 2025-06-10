@@ -7,6 +7,7 @@ class Cliente(models.Model):
     endereco = models.TextField()
     email = models.EmailField()
     telefone = models.CharField(max_length=20)
+ # clients(models): parte 1 – criar modelo Client
 
     def __str__(self):
         return self.nome
