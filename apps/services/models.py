@@ -31,3 +31,4 @@ class Agendamento(models.Model):
 
     def __str__(self):
         return f"{self.solicitacao} - {self.data}"
+# services(models): parte 2 – adicionar relacionamentos
