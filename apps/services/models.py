@@ -19,6 +19,7 @@ class SolicitacaoServico(models.Model):
     data_solicitacao = models.DateField(auto_now_add=True)
     descricao = models.TextField()
     status = models.CharField(max_length=20, choices=StatusSolicitacao.choices, default=StatusSolicitacao.PENDENTE)
+# services(models): parte 1 – criar SolicitacaoServico
 
     def __str__(self):
         return f"Solicitação {self.id} - {self.status}"
