@@ -10,3 +10,4 @@ urlpatterns = [
     path('edit/<int:id>/', views.edit_cliente, name='edit_cliente'),
     path('delete/<int:id>/', views.delete_cliente, name='delete_cliente'),
 ]
+#clients(urls): parte 2 – criar rotas iniciais
