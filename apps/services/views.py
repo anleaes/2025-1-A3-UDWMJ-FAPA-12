@@ -17,6 +17,7 @@ def add_solicitacao(request):
     else:
         form = SolicitacaoServicoForm()
     return render(request, 'services/add_solicitacao.html', {'form': form})
+# services(views): parte 1 – adicionar list/add views
 
 def edit_solicitacao(request, id):
     solicitacao = get_object_or_404(SolicitacaoServico, id=id)
