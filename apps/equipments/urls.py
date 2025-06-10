@@ -10,3 +10,4 @@ urlpatterns = [
     path('edit/<int:id>/', views.edit_equipamento, name='edit_equipamento'),
     path('delete/<int:id>/', views.delete_equipamento, name='delete_equipamento'),
 ]
+# equipments(urls): parte 2 – rotas básicas
