@@ -11,4 +11,6 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nome
+# clients(models): parte 2 – ajustar __str__ e Meta
+
 
