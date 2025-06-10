@@ -10,3 +10,4 @@ urlpatterns = [
     path('edit/<int:id>/', views.edit_solicitacao, name='edit_solicitacao'),
     path('delete/<int:id>/', views.delete_solicitacao, name='delete_solicitacao'),
 ]
+# services(urls): parte 2 – rotas iniciais
