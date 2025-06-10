@@ -10,4 +10,5 @@ class Tecnico(models.Model):
 
     def __str__(self):
         return self.nome
+# technicians(models): parte 2 – métodos adicionais
 
