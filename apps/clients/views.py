@@ -39,3 +39,4 @@ def delete_cliente(request, id):
         cliente.delete()
         return redirect('clients:list_clientes')
     return render(request, 'clients/delete_cliente.html', {'cliente': cliente})
+# clients(views): parte 2 – refinar lógica de edição/exclusão
