@@ -17,6 +17,7 @@ def add_peca(request):
     else:
         form = PecaForm()
     return render(request, 'parts/add_peca.html', {'form': form})
+# parts(views): parte 1 – adicionar list/add views
 
 def edit_peca(request, id):
     peca = get_object_or_404(Peca, id=id)
