@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 app_name = 'technicians'
+# technicians(urls): parte 1 – namespace
 
 urlpatterns = [
     path('', views.list_tecnicos, name='list_tecnicos'),
